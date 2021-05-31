@@ -1,5 +1,6 @@
 FROM mhart/alpine-node:11 AS builder
 WORKDIR /app
+COPY react-docker-app/package.json ./
 COPY . .
 RUN yarn run build
 
